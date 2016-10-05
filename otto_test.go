@@ -48,7 +48,7 @@ func BenchmarkOttoCallOverhead(b *testing.B) {
 		return otto.Value{}
 	})
 	vm.Run(`
-		var analyze = function(frame) {
+		var analyze = function(frame) {}
 	`)
 
 	for i := 0; i < b.N; i++ {
