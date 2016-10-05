@@ -16,19 +16,21 @@ type Frame struct {
 
 func BenchmarkOttoInit(b *testing.B) {
 	for i := 0; i < b.N; i++ {
-		testOttoInit()
+		otto.New()
 	}
 }
 
 func BenchmarkOttoModulo(b *testing.B) {
+	vm := otto.New()
 	for i := 0; i < b.N; i++ {
-		testOttoModulo()
+		vm.Run(javascript_modulo_test)
 	}
 }
 
 func BenchmarkOttoRecursion(b *testing.B) {
+	vm := otto.New()
 	for i := 0; i < b.N; i++ {
-		testOttoRecursion()
+		vm.Run(javascript_recursion_test)
 	}
 }
 

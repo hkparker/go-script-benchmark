@@ -6,13 +6,13 @@ Benchmarking embedded scripting languages inside Go, currently [Otto](https://gi
 
 |**Benchmark**|**Result**|
 |--------|---------:|
-|BenchmarkGoLuaInit-4|1138 ns/op|
-|BenchmarkGoLuaModulo-4 |16658 ns/op|
-|BenchmarkGoLuaRecursion-4|52920 ns/op|
-|BenchmarkOttoInit-4|166096 ns/op|
-|BenchmarkOttoModulo-4|1970924782 ns/op|
-|BenchmarkOttoRecursion-4|579791 ns/op|
-|BenchmarkOttoCallOverhead-4|10624 ns/op|
-|BenchmarkOttoRealistic-4|15382 ns/op|
+|BenchmarkGoLuaInit-4|1037 ns/op|
+|BenchmarkGoLuaModulo-4 |16283 ns/op|
+|BenchmarkGoLuaRecursion-4|33616 ns/op|
+|BenchmarkOttoInit-4|161343 ns/op|
+|BenchmarkOttoModulo-4|1868061122 ns/op|
+|BenchmarkOttoRecursion-4|356973 ns/op|
+|BenchmarkOttoCallOverhead-4|10415 ns/op|
+|BenchmarkOttoRealistic-4|15177 ns/op|
 
 Run the tests with `go test -bench=.`

@@ -1,29 +1,26 @@
 package script
 
 import (
+	"github.com/Shopify/go-lua"
 	"testing"
 )
 
 func BenchmarkGoLuaInit(b *testing.B) {
 	for i := 0; i < b.N; i++ {
-		testGoLuaInit()
+		lua.NewState()
 	}
 }
 
 func BenchmarkGoLuaModulo(b *testing.B) {
+	l := lua.NewState()
 	for i := 0; i < b.N; i++ {
-		testGoLuaModulo()
+		lua.DoString(l, lua_modulo_test)
 	}
 }
 
 func BenchmarkGoLuaRecursion(b *testing.B) {
+	l := lua.NewState()
 	for i := 0; i < b.N; i++ {
-		testGoLuaRecursion()
+		lua.DoString(l, lua_recursion_test)
 	}
 }
-
-//func BenchmarkGoLuaX(b *testing.B) {
-//	for i := 0; i < b.N; i++ {
-//		testGoLuaX()
-//	}
-//}
