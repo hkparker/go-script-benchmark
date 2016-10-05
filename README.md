@@ -5,6 +5,7 @@ Benchmarking embedded scripting languages inside Go, currently [Otto](https://gi
 ## Results
 
 |**Test**|**Result**|
+|--------|---------:|
 |BenchmarkGoLuaInit-4|1138 ns/op|
 |BenchmarkGoLuaModulo-4 |16658 ns/op|
 |BenchmarkGoLuaRecursion-4|52920 ns/op|
